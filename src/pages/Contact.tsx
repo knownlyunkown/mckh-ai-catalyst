@@ -51,10 +51,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-grid">
       {/* Header */}
-      <section className="py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
+      <section className="py-16 px-6 text-center relative">
+        <div className="max-w-4xl mx-auto animate-fade-in relative z-10">
+          {/* Subtle background glow */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/3 rounded-full blur-3xl"></div>
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             Your journey to AI excellence starts here.
           </h1>
@@ -70,6 +74,12 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="animate-fade-in">
             <div className="glass-card rounded-lg p-8 relative overflow-hidden">
+              {/* Floating glass bubbles background */}
+              <div className="absolute inset-0 -z-10 opacity-30">
+                <div className="absolute top-4 right-8 w-16 h-16 bg-white/10 rounded-full blur-sm float-slow"></div>
+                <div className="absolute bottom-8 left-6 w-12 h-12 bg-primary/10 rounded-full blur-sm float-medium delay-500"></div>
+                <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-primary-light/10 rounded-full blur-sm float-slow delay-1000"></div>
+              </div>
               {/* Success Overlay */}
               {isSubmitted && (
                 <div className="absolute inset-0 bg-background/95 backdrop-blur-sm flex items-center justify-center z-10 rounded-lg">

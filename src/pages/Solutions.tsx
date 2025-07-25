@@ -82,7 +82,7 @@ const Solutions = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-neural">
       {/* Sticky CTA */}
       {stickyVisible && (
         <div className="fixed bottom-6 right-6 z-40 animate-slide-up">
@@ -101,8 +101,13 @@ const Solutions = () => {
       )}
 
       {/* Header */}
-      <section className="py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
+      <section className="py-16 px-6 text-center relative">
+        <div className="max-w-4xl mx-auto animate-fade-in relative z-10">
+          {/* Background tech elements */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl float-slow"></div>
+            <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-primary-light/5 rounded-full blur-2xl float-medium delay-1000"></div>
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             Tailored AI solutions that fit your workflow.
           </h1>

@@ -36,10 +36,15 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-dots">
       {/* Header */}
-      <section className="py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
+      <section className="py-16 px-6 text-center relative">
+        <div className="max-w-4xl mx-auto animate-fade-in relative z-10">
+          {/* Background gradients */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl float-slow"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary-light/5 to-transparent rounded-full blur-2xl float-medium delay-1000"></div>
+          </div>
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles className="text-primary" size={32} />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">

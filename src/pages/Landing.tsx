@@ -49,9 +49,9 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-hexgrid">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6 min-h-screen flex items-center justify-center relative">
+      <section className="pt-24 pb-16 px-6 min-h-screen flex items-center justify-center relative bg-hexgrid">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
             We are the solution to your{' '}
@@ -69,10 +69,12 @@ const Landing = () => {
           </button>
         </div>
         
-        {/* Animated background element */}
+        {/* Animated background elements */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-lighter/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-light/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-lighter/20 rounded-full blur-3xl animate-pulse float-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-light/20 rounded-full blur-3xl animate-pulse delay-1000 float-medium"></div>
+          <div className="absolute top-1/2 right-1/6 w-32 h-32 bg-primary/10 rounded-full blur-2xl pulse-glow"></div>
+          <div className="absolute bottom-1/3 left-1/6 w-24 h-24 bg-primary-light/15 rounded-full blur-xl float-slow delay-500"></div>
         </div>
 
         {/* Scroll indicator */}
